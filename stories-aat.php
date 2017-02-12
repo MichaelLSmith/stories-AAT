@@ -138,7 +138,7 @@ function custom_taxonomies(){
 		'show_admin_column'     => true,
 		'update_count_callback' => '_update_post_term_count',
 		'query_var'             => true,
-		'rewrite'               => array( 'slug' => 'client' ),
+		'rewrite'               => array( 'slug' => 'community' ),
 	);
 
 	register_taxonomy(
@@ -177,7 +177,7 @@ function custom_taxonomies(){
 		'show_admin_column'     => true,
 		'update_count_callback' => '_update_post_term_count',
 		'query_var'             => true,
-		'rewrite'               => array( 'slug' => 'client' ),
+		'rewrite'               => array( 'slug' => 'service' ),
 	);
 
 	register_taxonomy(
@@ -215,7 +215,7 @@ function custom_taxonomies(){
 		'show_admin_column'     => true,
 		'update_count_callback' => '_update_post_term_count',
 		'query_var'             => true,
-		'rewrite'               => array( 'slug' => 'client' ),
+		'rewrite'               => array( 'slug' => 'people' ),
 	);
 
 	register_taxonomy(
