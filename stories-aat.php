@@ -188,6 +188,44 @@ function custom_taxonomies(){
 		$args
 	);
 
+	/* People */
+	$labels = array(
+	'name'                       => _x( 'People', 'taxonomy general name', 'and_also_too' ),
+	'singular_name'              => _x( 'People', 'taxonomy singular name', 'and_also_too' ),
+	'search_items'               => __( 'Search People', 'and_also_too' ),
+	'popular_items'              => __( 'Popular People', 'and_also_too' ),
+	'all_items'                  => __( 'All People', 'and_also_too' ),
+	'parent_item'                => null,
+	'parent_item_colon'          => null,
+	'edit_item'                  => __( 'Edit Service', 'and_also_too' ),
+	'update_item'                => __( 'Update Service', 'and_also_too' ),
+	'add_new_item'               => __( 'Add New Service', 'and_also_too' ),
+	'new_item_name'              => __( 'New Service Name', 'and_also_too' ),
+	'separate_items_with_commas' => __( 'Separate People with commas', 'and_also_too' ),
+	'add_or_remove_items'        => __( 'Add or remove People', 'and_also_too' ),
+	'choose_from_most_used'      => __( 'Choose from the most used People', 'and_also_too' ),
+	'not_found'                  => __( 'No People found.', 'and_also_too' ),
+	'menu_name'                  => __( 'People', 'and_also_too' ),
+	);
+
+	$args = array(
+		'hierarchical'          => false,
+		'labels'                => $labels,
+		'show_ui'               => true,
+		'show_admin_column'     => true,
+		'update_count_callback' => '_update_post_term_count',
+		'query_var'             => true,
+		'rewrite'               => array( 'slug' => 'client' ),
+	);
+
+	register_taxonomy(
+		//name of taxonomy
+		'tax-people',
+		//which post type it applies to:
+		array('stories', 'post'),
+		$args
+	);
+
 }
 
 add_action( 'init', 'custom_taxonomies');
