@@ -145,7 +145,7 @@ function custom_taxonomies(){
 		//name of taxonomy
 		'tax-community',
 		//which post type it applies to:
-		array('stories', 'post'),
+		array('stories'),
 		$args
 	);
 
@@ -184,7 +184,7 @@ function custom_taxonomies(){
 		//name of taxonomy
 		'tax-service',
 		//which post type it applies to:
-		array('stories', 'post'),
+		array('stories'),
 		$args
 	);
 
@@ -222,14 +222,11 @@ function custom_taxonomies(){
 		//name of taxonomy
 		'tax-people',
 		//which post type it applies to:
-		array('stories', 'post'),
+		array('stories'),
 		$args
 	);
 
 }
 
 add_action( 'init', 'custom_taxonomies');
-
-
-
  ?>
